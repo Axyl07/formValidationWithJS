@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>FormValidation</title>
 </head>
 <body>
-    <p>HTML Test</p>
+    <p>Form Validation Test</p>
+    <form id="form"  novalidate>
+        <label for="email">Please enter your G-mail address:
+            <input type="email" name="email" id="email" placeholder="eg:mrtodo@gmail.com" required minlength="8">
+            <span id="emailError">hi</span>
+        </label>
+        <label for="country">Please select your country
+            <select name="country" id="country" required>
+                <option value="USA">USA</option>
+                <option value="India" selected>India</option>
+                <option value="Japan">Japan</option>
+            </select>
+        </label>
+        <label for="zipCode">Enter your zipcode:
+            <input type="text" name="zipCode" id="zipCode">
+            <span id="zipError"></span>
+        </label>
+        <label for="password">Enter your password
+            <input type="password" name="password" id="password">
+        </label>
+        <label for="confirm">Confirm password:
+            <input type="password" name="confirm" id="confirm">
+        </label>
+       
+            <button>Submit</button>
+      
+    </form>
 </body>
 </html>

@@ -7,7 +7,7 @@
 </head>
 <body>
     <p>Form Validation Test</p>
-    <form id="form"  novalidate>
+    <form id="form"  >
         <label for="email">Please enter your G-mail address:
             <input type="email" name="email" id="email" placeholder="eg:mrtodo@gmail.com" required minlength="8">
             <span id="emailError">hi</span>
@@ -24,10 +24,12 @@
             <span id="zipError"></span>
         </label>
         <label for="password">Enter your password
-            <input type="password" name="password" id="password">
+            <input type="text" name="password" id="password">
+            <span id="passwordError"></span>
         </label>
         <label for="confirm">Confirm password:
             <input type="password" name="confirm" id="confirm">
+            <span id="confirmError"></span>
         </label>
        
             <button>Submit</button>

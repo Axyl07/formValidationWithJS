@@ -1,12 +1,17 @@
 import checkZipCode from "./chekZipCode";
-
-
+import checkPassword from "./checkPassword";
+import confirm from "./confirm";
 window.onload = () => {
     document.getElementById("country").onchange = checkZipCode;
     document.getElementById("zipCode").oninput = checkZipCode;
   };
   
-
+window.onload = () => {
+    document.getElementById("password").oninput = checkPassword;
+}
+window.onload = () => {
+    document.getElementById("confirm").oninput = confirm;
+}
 const form = document.querySelector('form');
 const email = document.querySelector('#email');
 const emailError = document.querySelector('#emailError');
@@ -21,7 +26,7 @@ email.addEventListener('input', () => {
   if (email.validity.valid) {
     emailError.textContent = "";
   } else {
-    showError();
+    showEmailError();
   }
 });
 
@@ -30,13 +35,13 @@ form.addEventListener("submit", (event) => {
   // if the email field is invalid
   if (!email.validity.valid) {
     // display an appropriate error message
-    showError();
+    showEmailError();
     // prevent form submission
     event.preventDefault();
   }
 });
 
-const showError = function () {
+const showEmailError = function () {
   if (email.validity.valueMissing) {
     // If empty
     emailError.textContent = "You need to enter an email address.";

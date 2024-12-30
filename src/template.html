@@ -7,7 +7,7 @@
 </head>
 <body>
     <p>Form Validation Test</p>
-    <form id="form"  >
+    <form id="form" novalidate >
         <label for="email">Please enter your G-mail address:
             <input type="email" name="email" id="email" placeholder="eg:mrtodo@gmail.com" required minlength="8">
             <span id="emailError">hi</span>
@@ -20,15 +20,15 @@
             </select>
         </label>
         <label for="zipCode">Enter your zipcode:
-            <input type="text" name="zipCode" id="zipCode">
+            <input type="text" name="zipCode" id="zipCode" required>
             <span id="zipError"></span>
         </label>
         <label for="password">Enter your password
-            <input type="text" name="password" id="password">
+            <input type="text" name="password" id="password" required minlength="8">
             <span id="passwordError"></span>
         </label>
         <label for="confirm">Confirm password:
-            <input type="password" name="confirm" id="confirm">
+            <input type="text" name="confirm" id="confirm" required>
             <span id="confirmError"></span>
         </label>
        

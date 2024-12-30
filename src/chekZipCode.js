@@ -6,11 +6,11 @@ export default function checkZipCode() {
     ],
     India: [
       "^(I-)?\\d{6}$",
-      "Indian postal codes must have exactly 6 digits: e.g. I-75012 or 75012",
+      "Indian postal codes must have exactly 6 digits: e.g. I-75012 or 750125",
     ],
     Japan: [
       "^(J-)?\\d{7}$",
-      "Indian postal codes must have exactly 7 digits: e.g. I-75012 or 75012",
+      "Japanese postal codes must have exactly 7 digits: e.g. J-75012 or 7500012",
     ],
   };
     const country = document.getElementById('country').value;
